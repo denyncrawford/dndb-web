@@ -2,7 +2,7 @@ module.exports = {
     purge: [],
     theme: {
       fontFamily: {
-        'sans': ['Montserrat', 'Sans-serif'],
+        'sans': ['Inter', 'Sans-serif'],
         'mono': ['Major Mono Display', 'monospace']
       },
       extend: {},
