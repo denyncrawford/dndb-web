@@ -1,6 +1,6 @@
 <template>
     <page>
-      <div class="h-full flex justify-center items-center">
+      <div class="h-full z-10 flex justify-center items-center">
         <div class="flex items-center">
           <img class="logo" alt="Vue logo" src="../assets/dndblogo.png" />
           <div class="ml-10 min-w-full">
@@ -18,7 +18,6 @@
 </template>
 
 <script>
-import HelloWorld from '../components/HelloWorld.vue'
 import Page from '../components/structure/Page.vue'
 import TypeIt from "typeit";
 import { computed } from 'vue'
@@ -65,7 +64,7 @@ export default {
     }
   },
   components: {
-    Page
+    Page,
   }
 }
 </script>
