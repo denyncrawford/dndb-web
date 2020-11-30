@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+
+.router-link-exact-active {
+  @apply bg-white;
+}
+
+.router-link-exact-active * {
+  @apply text-indigo-800;
+}
+
+.parent:hover * {
+  @apply text-indigo-800
+}
+
+@tailwind utilities;
