@@ -60,7 +60,7 @@ export default {
     stroke:#00FFA8;
   }
   .link {
-    transition: .2s;
+    transition: color .2s;
     color: #606266;
     cursor: pointer;
     display: inline-flex;
@@ -76,10 +76,34 @@ export default {
     font-weight: 500;
     font-size: 14px;
   }
+
   .link:hover, .router-link-exact-active {
     color: #00FFA8;
   }
+  .link::after {
+    content: "";
+    background: #00FFA8;
+    height: 1px;
+    position: absolute;
+    bottom: 0;
+    transition: .16s all 0.025s; 
+  }
+  .link::after {
+    left: 100%;
+    right: 0;
+  }
+
+  .link:hover ~ .link::after {
+    left: 0;
+    right: 100%;
+  }
+
   .link:hover::after {
+    left: 0;
+    right: 0;
+  }
+  
+  /* .link:hover::after {
     content: "";
     border-color: #00FFA8;
     position: absolute;
@@ -89,7 +113,7 @@ export default {
     bottom: 0;
     border-bottom: 1px solid;
     animation: anchor-underline 1s cubic-bezier(0,.5,0,1);
-  }
+  } */
   * {
     color: white;
   }
