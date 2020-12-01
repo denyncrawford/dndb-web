@@ -4,8 +4,10 @@
         <div class="flex items-top">
           <img class="logo" alt="DnDB" src="../assets/dndblogo.png" />
           <div class="ml-10">
-            <h1 class="text-5xl max-w-xl">{{ title }}</h1>
-            <h4 class="text-2xl" id="typed"></h4>
+            <div id="animateMe" class="flex relative max-w-xl">
+              <h1 class="text-main-color text-5xl max-w-xl">{{ title }}</h1>
+            </div>
+            <h4 class="text-2xl wrap" id="typed"></h4>
             <p class="max-w-xl mt-5">DnDB is a powerful but minimalist database engine written on JS/TS for the deno runtime that uses the mongo query API to edit and find data, making it 100% exportable to a mongojs environment.</p>
             <el-button type="primary" class="mt-5 text-black" @click="increment">Get Started</el-button>
             <p class="inline-block ml-5 mt-5 text-gray">DnDB latest version is: <code>v{{version}}</code>.</p>
@@ -75,5 +77,9 @@ export default {
         max-height: 200px;
         animation: jackInTheBox; /* referring directly to the animation's @keyframe declaration */
         animation-duration: 1s; /* don't forget to set a duration! */
+    }
+    h1 span {
+        display: inline-block;
+        position: absolute;
     }
 </style>

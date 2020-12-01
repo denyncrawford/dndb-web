@@ -27,3 +27,15 @@ export default {
   }
 }
 </script>
+
+<style>
+  .slide-enter-active {
+   animation: fadeInUp;
+   animation-duration: .2s;
+  }
+
+  .slide-leave-active {
+    animation: fadeOutDown;
+    animation-duration: .2s;
+  }
+</style>

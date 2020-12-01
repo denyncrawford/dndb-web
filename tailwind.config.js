@@ -5,7 +5,11 @@ module.exports = {
         'sans': ['Inter', 'Sans-serif'],
         'mono': ['Major Mono Display', 'monospace']
       },
-      extend: {},
+      extend: {
+        colors: {
+          "main-color": "#00ffa8" 
+        }
+      },
     },
     variants: {
       textColor: ['responsive', 'hover', 'focus', 'group-hover'],

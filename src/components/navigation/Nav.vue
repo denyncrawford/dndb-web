@@ -1,5 +1,5 @@
 <template>
-  <div class="p-5 z-20 fixed flex w-full justify-center">
+  <div class="p-5 bg-black z-20 fixed flex w-full justify-center">
     <router-link class="flex items-center bg-opacity-0" :to="{name:'Home', path:'/'}">
       <img class="logo" src="../../assets/dndblogo.png" :if="image">
       <h1 class="font-bold ml-2 text-white" :if="title">{{title}}</h1>
@@ -60,6 +60,7 @@ export default {
     stroke:#00FFA8;
   }
   .link {
+    transition: .2s;
     color: #606266;
     cursor: pointer;
     display: inline-flex;
@@ -87,8 +88,23 @@ export default {
     height: 0;
     bottom: 0;
     border-bottom: 1px solid;
+    animation: anchor-underline 1s cubic-bezier(0,.5,0,1);
   }
   * {
     color: white;
   }
+
+  @keyframes anchor-underline {
+  0%, 10% {
+    left: 0;
+    right: 100%;
+  }
+  40%, 60% {
+    left: 0;
+    right: 0;
+  }
+  90%, 100% {
+    left: 0%;
+  }
+}
 </style>
