@@ -103,17 +103,6 @@ export default {
     right: 0;
   }
   
-  /* .link:hover::after {
-    content: "";
-    border-color: #00FFA8;
-    position: absolute;
-    left: 0;
-    right: 0;
-    height: 0;
-    bottom: 0;
-    border-bottom: 1px solid;
-    animation: anchor-underline 1s cubic-bezier(0,.5,0,1);
-  } */
   * {
     color: white;
   }
