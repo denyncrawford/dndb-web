@@ -10,6 +10,7 @@
     "animejs": "^3.2.1",
     "axios": "^0.20.0-0",
     "element-plus": "^1.0.1-beta.0",
+    "feather-icons": "^4.28.0",
     "tailwindcss": "compat",
     "typeit": "^7.0.4",
     "vue": "^3.0.2",

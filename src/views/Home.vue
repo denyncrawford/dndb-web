@@ -1,14 +1,14 @@
 <template>
     <page>
       <div class="h-full z-10 flex justify-center items-center">
-        <div class="flex items-center">
-          <img class="logo" alt="Vue logo" src="../assets/dndblogo.png" />
-          <div class="ml-10 min-w-full">
-            <h1 class="text-5xl">{{ title }}</h1>
+        <div class="flex items-top">
+          <img class="logo" alt="DnDB" src="../assets/dndblogo.png" />
+          <div class="ml-10">
+            <h1 class="text-5xl max-w-xl">{{ title }}</h1>
             <h4 class="text-2xl" id="typed"></h4>
             <p class="max-w-xl mt-5">DnDB is a powerful but minimalist database engine written on JS/TS for the deno runtime that uses the mongo query API to edit and find data, making it 100% exportable to a mongojs environment.</p>
-            <el-button type="primary" class="mt-5" @click="increment">count is: {{ count }}</el-button>
-            <p class="mt-5">DnDB latest version is: <code>v{{version}}</code>.</p>
+            <el-button type="primary" class="mt-5 text-black" @click="increment">Get Started</el-button>
+            <p class="inline-block ml-5 mt-5 text-gray">DnDB latest version is: <code>v{{version}}</code>.</p>
           </div>
         </div>
         <div class="">
@@ -28,7 +28,7 @@ export default {
   name: 'App',
   data() {
     return {
-      title: "DnDB",
+      title: "The database engine for the Dinosaurs.",
       version: ""
     }
   },
@@ -37,21 +37,21 @@ export default {
     console.log(version);
     this.version = version.data.version
     new TypeIt("#typed", {
-    speed: 75,
+    speed: 30,
     }).type("DnDB is ", {delay: 300})
     .type('fast')
     .pause(700)
     .delete(4)
-    .type('awasome')
+    .type('open source')
     .pause(700)
-    .delete(7)
-    .type('powerful')
+    .delete(11)
+    .type('NoSQL')
     .pause(700)
-    .delete(8)
+    .delete(5)
     .type('asynchronous')
     .pause(700)
     .delete(12)
-    .type('the database for Deno.')
+    .type('the datastore for Deno.')
     .go();
   },
   setup() {
@@ -71,7 +71,8 @@ export default {
 
 <style scoped>
     .logo {
-        max-width: 300px;
+        max-width: 200px;
+        max-height: 200px;
         animation: jackInTheBox; /* referring directly to the animation's @keyframe declaration */
         animation-duration: 1s; /* don't forget to set a duration! */
     }
