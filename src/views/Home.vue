@@ -20,8 +20,31 @@
       </div>
     </page>
     <page bg="bg-black">
-        <div data-rellax-speed="2" class="rellax justify-center w-full flex text-center">
-          <h1 class="text-center text-main-color text-5xl max-w-xl mb-30">Start from here</h1>
+        <div data-rellax-speed="5" class="bg-black rellax justify-center w-full flex flex-col text-center">
+          <h1 class="mx-auto text-center text-main-color text-5xl max-w-xl mt-20 mb-10">Get Started</h1>
+          <p class="mb-10 text-gray-80">Try this points to getting start with DnDB</p>
+          <div class="w-9/12 mx-auto grid grid-cols-4 gap-10">
+            <div class="p-10 rounded-2xl flex flex-col justify-center border border-2 transition duration-200 hover:border-main-color">
+              <h1 class="text-3xl max-w-xl mb-5">The Project</h1>
+              <div class="mb-5 flex">
+                <i class="mx-auto stroke-current text-main-color" data-feather="plus"></i>
+              </div>
+              <p>Know more about this and other projects by Crawford.</p>
+              <el-button type="primary" class="hover:text-black bg-transparent text-white mt-5 text-black" @click="increment">Read</el-button>
+            </div>
+            <div class="p-10 rounded-2xl flex flex-col justify-center border border-2 transition duration-200 hover:border-main-color">
+              <h1 class="text-3xl max-w-xl mb-5">Documentation</h1>
+              <div class="mb-5 flex">
+                <i class="mx-auto stroke-current text-main-color" data-feather="book-open"></i>
+              </div>
+              <p>Read the Documentation to learn about the DnDB API</p>
+              <el-button type="primary" class="hover:text-black bg-transparent text-white mt-5 text-black" @click="increment">Get Started</el-button>
+            </div>
+            <div class="p-10 rounded-2xl border border-2 transition duration-200 hover:border-main-color">
+              <h1 class="text-3xl max-w-xl">Doomie</h1>
+              <p></p>
+            </div>
+          </div>
         </div>
     </page>
 </template>
@@ -33,6 +56,7 @@ import { computed } from 'vue'
 import { useStore } from 'vuex'
 import axios from 'axios'
 import Rellax from "rellax"
+import { replace } from 'feather-icons'
 
 export default {
   name: 'App',
@@ -49,10 +73,11 @@ export default {
       let x = (window.outerWidth - e.pageX * 2) / 100;
       let y = (window.outerHeight - e.pageY * 2) / 100;
       el.style.transform = `translateX(${x}px) translateY(${y}px)`
-      hero.style.transform = `translateX(${x}px) translateY(${y}px)`
+      hero.style.transform = `translateX(-${x}px) translateY(-${y}px)`
     }
   },
   async mounted() {
+    replace()
     let version = await axios('https://raw.githubusercontent.com/denyncrawford/dndb/master/egg.json')
     this.version = version.data.version
     new TypeIt("#typed", {
