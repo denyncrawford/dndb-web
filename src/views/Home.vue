@@ -1,11 +1,15 @@
 <template>
-    <page class="overflow-hidden" bg="bg-black">
+    <page @mousemove="parallax" class="overflow-hidden" bg="bg-black">
+      <div class="w-screen -top-0 -left-0 h-screen absolute">
+        <div ref="pllx" class="min-w-screen min-h-screen header">
+        </div>
+      </div>
       <div class="min-h-screen flex-col z-10 flex justify-center items-center">
-        <div class="z-50 flex items-top">
+        <div ref="hero" class="z-50 flex items-top">
           <img class="logo" alt="DnDB" src="../assets/dndblogo.png" />
           <div class="ml-10">
             <div id="animateMe" class="flex relative max-w-xl">
-              <h1 class="bg-black text-main-color text-5xl max-w-xl">{{ title }}</h1>
+              <h1 class="text-main-color text-5xl max-w-xl">{{ title }}</h1>
             </div>
             <h4 class="text-2xl wrap" id="typed"></h4>
             <p class="max-w-xl mt-5">DnDB is a powerful but minimalist database engine written on JS/TS for the deno runtime that uses the mongo query API to edit and find data, making it 100% exportable to a mongojs environment.</p>
@@ -36,6 +40,16 @@ export default {
     return {
       title: "The database engine for the Dinosaurs.",
       version: ""
+    }
+  },
+  methods: {
+    parallax(e) {
+      let hero = this.$refs.hero;
+      let el = this.$refs.pllx;
+      let x = (window.outerWidth - e.pageX * 2) / 100;
+      let y = (window.outerHeight - e.pageY * 2) / 100;
+      el.style.transform = `translateX(${x}px) translateY(${y}px)`
+      hero.style.transform = `translateX(${x}px) translateY(${y}px)`
     }
   },
   async mounted() {
@@ -81,6 +95,12 @@ export default {
         max-height: 200px;
         animation: jackInTheBox; /* referring directly to the animation's @keyframe declaration */
         animation-duration: 1s; /* don't forget to set a duration! */
+    }
+    .header {
+      background-image: url('../assets/bg.jpg');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
     }
     h1 span {
         display: inline-block;

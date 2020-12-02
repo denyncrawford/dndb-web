@@ -1,5 +1,5 @@
 <template>
-  <div class="p-5 bg-black z-20 fixed flex w-full justify-center">
+  <div class="p-5 z-20 fixed flex w-full justify-center">
     <router-link class="flex items-center bg-opacity-0" :to="{name:'Home', path:'/'}">
       <img class="logo" src="../../assets/dndblogo.png" :if="image">
       <h1 class="font-bold ml-2 text-white" :if="title">{{title}}</h1>
