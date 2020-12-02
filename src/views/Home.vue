@@ -1,11 +1,11 @@
 <template>
-    <page>
-      <div class="h-full z-10 flex justify-center items-center">
-        <div class="flex items-top">
+    <page class="overflow-hidden" bg="bg-black">
+      <div class="min-h-screen flex-col z-10 flex justify-center items-center">
+        <div class="z-50 flex items-top">
           <img class="logo" alt="DnDB" src="../assets/dndblogo.png" />
           <div class="ml-10">
             <div id="animateMe" class="flex relative max-w-xl">
-              <h1 class="text-main-color text-5xl max-w-xl">{{ title }}</h1>
+              <h1 class="bg-black text-main-color text-5xl max-w-xl">{{ title }}</h1>
             </div>
             <h4 class="text-2xl wrap" id="typed"></h4>
             <p class="max-w-xl mt-5">DnDB is a powerful but minimalist database engine written on JS/TS for the deno runtime that uses the mongo query API to edit and find data, making it 100% exportable to a mongojs environment.</p>
@@ -13,9 +13,12 @@
             <p class="inline-block ml-5 mt-5 text-gray">DnDB latest version is: <code>v{{version}}</code>.</p>
           </div>
         </div>
-        <div class="">
       </div>
-      </div>
+    </page>
+    <page bg="bg-black">
+        <div data-rellax-speed="2" class="rellax justify-center w-full flex text-center">
+          <h1 class="text-center text-main-color text-5xl max-w-xl mb-30">Start from here</h1>
+        </div>
     </page>
 </template>
 
@@ -25,6 +28,7 @@ import TypeIt from "typeit";
 import { computed } from 'vue'
 import { useStore } from 'vuex'
 import axios from 'axios'
+import Rellax from "rellax"
 
 export default {
   name: 'App',
@@ -36,7 +40,6 @@ export default {
   },
   async mounted() {
     let version = await axios('https://raw.githubusercontent.com/denyncrawford/dndb/master/egg.json')
-    console.log(version);
     this.version = version.data.version
     new TypeIt("#typed", {
     speed: 30,
@@ -55,6 +58,7 @@ export default {
     .delete(12)
     .type('the datastore for Deno.')
     .go();
+    var rellax = new Rellax('.rellax');
   },
   setup() {
     const store = useStore()
@@ -66,7 +70,7 @@ export default {
     }
   },
   components: {
-    Page,
+    Page
   }
 }
 </script>

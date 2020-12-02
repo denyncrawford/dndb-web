@@ -4,3 +4,31 @@
   margin: 0;
   padding: 0;
 }
+
+html {
+  scrollbar-face-color: #646464;
+  scrollbar-base-color: #353535;
+  scrollbar-3dlight-color: #4b4b4b;
+  scrollbar-highlight-color: #646464;
+  scrollbar-track-color: #000;
+  scrollbar-arrow-color: #000;
+  scrollbar-shadow-color: #646464;
+  scrollbar-dark-shadow-color: #646464;
+}
+
+::-webkit-scrollbar { width: 8px; height: 3px;}
+::-webkit-scrollbar-button {  background-color: #666; }
+::-webkit-scrollbar-track {  background-color: #646464;}
+::-webkit-scrollbar-track-piece { background-color: #000;}
+::-webkit-scrollbar-thumb { height: 50px; background-color: #666;}
+::-webkit-scrollbar-corner { background-color: #2c2c2c;}
+::-webkit-resizer { background-color: #666;}
+
+::selection {
+ background-color:#00ffa8;
+ color:black
+}
+
+.text-main-color {
+  color: #00ffa8
+}
