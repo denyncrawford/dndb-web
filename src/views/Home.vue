@@ -1,5 +1,6 @@
 <template>
-    <page @mousemove="parallax" class="overflow-hidden" bg="bg-black">
+    <div>
+      <page @mousemove="parallax" class="overflow-hidden" bg="bg-black">
       <div class="w-screen -top-0 -left-0 h-screen absolute">
         <div ref="pllx" class="min-w-screen min-h-screen header">
         </div>
@@ -20,11 +21,11 @@
       </div>
     </page>
     <page bg="bg-black">
-        <div data-rellax-speed="5" class="bg-black rellax justify-center w-full flex flex-col text-center">
+        <div data-rellax-speed="5" class="rellax justify-center w-full flex flex-col text-center">
           <h1 class="mx-auto text-center text-main-color text-5xl max-w-xl mt-20 mb-10">Get Started</h1>
           <p class="mb-10 text-gray-80">Try this points to getting start with DnDB</p>
-          <div class="w-9/12 mx-auto grid grid-cols-4 gap-10">
-            <div class="p-10 rounded-2xl flex flex-col justify-center border border-2 transition duration-200 hover:border-main-color">
+          <div class="w-9/12 mx-auto grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-10">
+            <div class="p-10 rounded-2xl flex flex-col justify-center hover:border border-2 transition duration-200 hover:border-main-color">
               <h1 class="text-3xl max-w-xl mb-5">The Project</h1>
               <div class="mb-5 flex">
                 <i class="mx-auto stroke-current text-main-color" data-feather="plus"></i>
@@ -47,6 +48,7 @@
           </div>
         </div>
     </page>
+    </div>
 </template>
 
 <script>

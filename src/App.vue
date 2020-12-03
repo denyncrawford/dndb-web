@@ -1,6 +1,10 @@
 <template>
   <navigation :links="links" image="true" title="DnDB" />
-  <router-view/>
+  <router-view v-slot="{ Component }">
+    <transition name="fade">
+      <component :is="Component" />
+    </transition>
+  </router-view>
 </template>
 <script>
 import { useRouter } from "vue-router";
@@ -29,13 +33,13 @@ export default {
 </script>
 
 <style>
-  .slide-enter-active {
-   animation: fadeInUp;
-   animation-duration: .2s;
+  .fade-enter-active {
+   animation: fadeIn;
+   animation-duration: .5s;
   }
 
-  .slide-leave-active {
-    animation: fadeOutDown;
-    animation-duration: .2s;
+  .fade-leave-active {
+    animation: fadeOut;
+    animation-duration: .5s;
   }
 </style>
