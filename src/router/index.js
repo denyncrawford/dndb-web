@@ -6,7 +6,7 @@ const routes = [
         name: "Home",
         component: () => import( /* webpackChunkName: "home" */ '../views/Home.vue'),
         meta: {
-            title: 'DnDB - The Deno database'
+            title: 'DnDB - The NoSql database for Deno'
         },
     }, 
     {
@@ -37,7 +37,10 @@ const routes = [
 
 const router = createRouter({
     routes,
-    history: createWebHistory("/")
+    history: createWebHistory("/"),
+    scrollBehavior (to, from, savedPosition) {
+        return { x: 0, y: 0 }
+    }
 })
 
 export default router;

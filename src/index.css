@@ -14,6 +14,11 @@ html {
   scrollbar-arrow-color: #000;
   scrollbar-shadow-color: #646464;
   scrollbar-dark-shadow-color: #646464;
+  scroll-behavior: smooth;
+}
+
+html, body {
+  background-color: black;
 }
 
 ::-webkit-scrollbar { width: 8px; height: 3px;}

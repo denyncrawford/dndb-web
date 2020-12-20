@@ -5,10 +5,14 @@
       <component :is="Component" />
     </transition>
   </router-view>
+  <site-footer/>
 </template>
 <script>
 import { useRouter } from "vue-router";
+import { useStore } from "vuex"
+import axios from 'axios'
 import Navigation from './components/navigation/Nav.vue'
+import SiteFooter from './components/Footer.vue'
 export default {
   data() {
     return {
@@ -26,8 +30,14 @@ export default {
       document.title = to.meta.title || 'DnDB'
     })
   },
+  async mounted() {
+    const store = this.$store
+    let { data } = await axios('https://raw.githubusercontent.com/denyncrawford/dndb/master/egg.json')
+    store.commit('setVersion', data.version);
+  },
   components: {
-    Navigation
+    Navigation,
+    SiteFooter
   }
 }
 </script>
