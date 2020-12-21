@@ -23,7 +23,7 @@
     <page ref="get-started" id="get-started" bg="bg-black">
       <div class="px-32">
         <h1 class="text-main-color text-5xl inline-block">Get started</h1>
-        <p class="mt-5">This is a quick guide for implementing DnDB, plese read the documentation for a deeper knowleadge. <br> 
+        <p class="mt-5">This is a quick guide for implementing DnDB, plaese read the documentation for a deeper knowleadge. <br> 
            <b class="text-bold">The version number on this quick guide is always the latest release available</b>.
         </p>
         <h1 class="mt-10 text-main-color text-3xl inline-block">Importing</h1>
