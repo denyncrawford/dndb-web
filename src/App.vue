@@ -43,8 +43,6 @@ export default {
 </script>
 
 <style>
-@import 'highlight.js/styles/dracula.css';
-@import './assets/styles/index.css';
   .fade-enter-active {
    animation: fadeIn;
    animation-duration: .5s;

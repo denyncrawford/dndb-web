@@ -1,21 +1,20 @@
 module.exports = {
-    purge: [],
-    theme: {
-      fontFamily: {
-        'sans': ['Inter', 'Sans-serif'],
-        'mono': ['Major Mono Display', 'monospace']
-      },
-      extend: {
-        colors: {
-          "main-color": "#00ffa8" 
-        }
-      },
+  purge: false,
+  theme: {
+    fontFamily: {
+      'sans': ['Inter', 'Sans-serif'],
+      'mono': ['Major Mono Display', 'monospace']
     },
-    variants: {
-      textColor: ['responsive', 'hover', 'focus', 'group-hover'],
-      width: ['responsive', 'hover', 'focus', 'group-hover'],
-      padding: ['responsive', 'hover', 'focus'],
+    extend: {
+      colors: {
+        "main-color": "#00ffa8" 
+      }
     },
-    plugins: [],
-  }
-  
+  },
+  variants: {
+    textColor: ['responsive', 'hover', 'focus', 'group-hover'],
+    width: ['responsive', 'hover', 'focus', 'group-hover'],
+    padding: ['responsive', 'hover', 'focus'],
+  },
+  plugins: [],
+}
