@@ -11,12 +11,18 @@
   <div class="px-40 flex items-center py-10">
     <div>
       <h1 class="text-lg text-main-color">© 2020 Crawford</h1>
-      <p class="text-sm text-gray-400">A module by denyncrawford. <br> Made with 💚 for the Deno community.</p>
+      <p class="text-sm text-gray-400">A module by <a class="text-main-color" href="https://github.com/denyncrawford" target="_blank" rel="noopener noreferrer">denyncrawford</a>. <br> Made with 💚 for the Deno community.</p>
     </div>
     <div class="flex ml-auto">
-        <img width=25 src="https://nest.land/images/nest.land/logo_dark.svg" alt="">
-        <img class="ml-4" width=25 src="https://cse.msu.edu/~sydlikb1/assets/github.png" alt="">
-        <img class="ml-4 invert" width=25 src="https://cdn.worldvectorlogo.com/logos/deno-1.svg" alt="">
+        <a target="_blank" href="https://nest.land/package/dndb">
+          <img width=25 src="https://nest.land/images/nest.land/logo_dark.svg" alt="">
+        </a>
+        <a target="_blank" href="https://github.com/denyncrawford/dndb">
+          <img width=25 class="ml-4" src="https://cse.msu.edu/~sydlikb1/assets/github.png" alt="">
+        </a>
+        <a target="_blank" href="https://deno.land/x/dndb">
+          <img width=25 class="ml-4 invert" src="https://cdn.worldvectorlogo.com/logos/deno-1.svg" alt="">
+        </a>
       </div>
   </div>
 </template>

@@ -14,13 +14,13 @@
               </div>
               <h4 class="text-2xl wrap" id="typed"></h4>
               <p class="max-w-xl mt-5">DnDB is a powerful but minimalist database engine written on JS/TS for the deno runtime that uses the mongo query API to edit and find data, making it 100% exportable to a mongojs environment.</p>
-              <el-button type="primary" class="mt-5 text-black" @click="increment">Get Started</el-button>
+              <a class="el-button el-button--primary mt-5 text-black" href="#get-started" data-v-c5362648="" data-v-a5f3b890-s=""><span>Get Started</span></a>
               <p class="inline-block ml-5 mt-5 text-gray">DnDB latest version is: <code>v{{version}}</code>.</p>
             </div>
           </div>
         </div>
       </page>
-    <page id="get-started" bg="bg-black">
+    <page ref="get-started" id="get-started" bg="bg-black">
       <div class="px-32">
         <h1 class="text-main-color text-5xl inline-block">Get started</h1>
         <p class="mt-5">This is a quick guide for implementing DnDB, plese read the documentation for a deeper knowleadge. <br> 
@@ -76,7 +76,7 @@ let removed = await collection.remove({ username:'Denyn' });
                 <i class="mx-auto stroke-current text-main-color" data-feather="plus"></i>
               </div>
               <p class="mb-5">Know more about this and other projects by Crawford.</p>
-              <el-button type="primary" class="hover:text-black bg-transparent text-white mt-auto text-black" @click="increment">Read</el-button>
+              <el-button type="primary" @click="go('why')" class="hover:text-black bg-transparent text-white mt-auto text-black" @click="increment">Read</el-button>
             </div>
             <div class="p-10 rounded-2xl flex flex-col transform hover:scale-110 justify-center border border-2 transition duration-200 hover:border-main-color">
               <h1 class="text-3xl max-w-xl mb-5">Documentation</h1>
@@ -84,7 +84,7 @@ let removed = await collection.remove({ username:'Denyn' });
                 <i class="mx-auto stroke-current text-main-color" data-feather="book-open"></i>
               </div>
               <p class="mb-5">Read the Documentation to learn about the DnDB API</p>
-              <el-button type="primary" class="hover:text-black bg-transparent text-white mt-auto text-black" @click="increment">Get Started</el-button>
+              <el-button type="primary" @click="go('docs')" class="hover:text-black bg-transparent text-white mt-auto text-black" @click="increment">Get Started</el-button>
             </div>
             <div class="p-10 rounded-2xl flex flex-col border transform hover:scale-110 border-2 transition duration-200 hover:border-main-color">
               <h1 class="text-3xl max-w-xl mb-5">Starter Demo</h1>
@@ -124,6 +124,9 @@ export default {
       let y = (window.outerHeight - e.pageY * 2) / 100;
       el.style.transform = `translateX(${x}px) translateY(${y}px)`
       hero.style.transform = `translateX(-${x}px) translateY(-${y}px)`
+    },
+    go(page) {
+      this.$router.push(`/${page}`)
     }
   },
   async mounted() {
