@@ -43,6 +43,10 @@ export default {
 </script>
 
 <style>
+@import 'highlight.js/styles/dracula.css';
+@import 'animate.css/animate.min.css';
+@import './assets/themes/dndb/index.css';
+@import './assets/styles/index.css';
 @import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 * {
