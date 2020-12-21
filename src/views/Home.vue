@@ -76,7 +76,7 @@ let removed = await collection.remove({ username:'Denyn' });
                 <i class="mx-auto stroke-current text-main-color" data-feather="plus"></i>
               </div>
               <p class="mb-5">Know more about this and other projects by Crawford.</p>
-              <el-button type="primary" @click="go('why')" class="hover:text-black bg-transparent text-white mt-auto text-black" @click="increment">Read</el-button>
+              <el-button type="primary" @click="go('why')" class="hover:text-black bg-transparent text-white mt-auto text-black">Read</el-button>
             </div>
             <div class="p-10 rounded-2xl flex flex-col transform hover:scale-110 justify-center border border-2 transition duration-200 hover:border-main-color">
               <h1 class="text-3xl max-w-xl mb-5">Documentation</h1>
@@ -84,7 +84,7 @@ let removed = await collection.remove({ username:'Denyn' });
                 <i class="mx-auto stroke-current text-main-color" data-feather="book-open"></i>
               </div>
               <p class="mb-5">Read the Documentation to learn about the DnDB API</p>
-              <el-button type="primary" @click="go('docs')" class="hover:text-black bg-transparent text-white mt-auto text-black" @click="increment">Get Started</el-button>
+              <el-button type="primary" @click="go('docs')" class="hover:text-black bg-transparent text-white mt-auto text-black">Get Started</el-button>
             </div>
             <div class="p-10 rounded-2xl flex flex-col border transform hover:scale-110 border-2 transition duration-200 hover:border-main-color">
               <h1 class="text-3xl max-w-xl mb-5">Starter Demo</h1>
@@ -92,7 +92,7 @@ let removed = await collection.remove({ username:'Denyn' });
                   <i class="mx-auto stroke-current text-main-color" data-feather="codesandbox"></i>
                 </div>
               <p class="mb-5">Make a quick test using Dndb on a server environment</p>
-              <el-button type="primary" class="mt-auto hover:text-black bg-transparent text-white text-black" @click="increment">Run the starter</el-button>
+              <el-button type="primary" class="mt-auto hover:text-black bg-transparent text-white text-black">Run the starter</el-button>
             </div>
           </div>
         </div>

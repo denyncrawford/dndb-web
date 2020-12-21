@@ -12,6 +12,7 @@
         Right now all the 'databases' and data stores available for Deno are loading (into memory) the entire collection to read and write the data. This is not an optimal solution when it comes to a production environment where data tends to grow. 
         <br><br>
         <span class="text-main-color">DnDB is designed to stream and buffer the data store in chunks, making it perfect for handling large data sets without compromising performance.</span>
+        </p>
         <h1 class="text-main-color mt-32 text-5xl max-w-xl">But Wait...</h1>
         <p class="mt-10 max-w-prose">DnDB is a small project waiting for contribution, <span>this is not a driver</span> for any existent engine;
         this is a possible database engine that is growing with Deno.
