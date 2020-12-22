@@ -1,7 +1,7 @@
 <template>
   <div>
     <page>
-      <div class="ml-32">
+      <div class="sm:ml-32">
         <h1 class="text-main-color mt-32 text-5xl max-w-xl">Why DnDB?</h1>
         <p class="mt-10 max-w-prose">This project arises from the need for a database for deno, now there are a few :D but at the time we were pioneers. 
         <br><br>

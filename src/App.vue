@@ -43,6 +43,7 @@ export default {
 </script>
 
 <style>
+  
   .fade-enter-active {
    animation: fadeIn;
    animation-duration: .5s;
@@ -52,4 +53,7 @@ export default {
     animation: fadeOut;
     animation-duration: .5s;
   }
+  .hljs {
+      background: black;
+    }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <page bg="bg-black">
     <div class="-mt-10 flex-col min-h-screen items-center justify-center flex text-center">
-      <h1 class="text-main-color text-5xl mb-10">DnDB Documentation</h1>
+      <h1 class="text-main-color text-3xl sm:text-5xl mb-10">DnDB Documentation</h1>
       <p class="flex mb-10"><a href="https://nest.land/package/dndb"><img src="https://nest.land/badge.svg" alt="nest badge"></a> <img
           src="https://hitcounter.pythonanywhere.com/count/tag.svg?url=https%3A%2F%2Fgithub.com%2Fdenyncrawford%2Fdndb"
           alt="Hits" nii7lr0wn=""> <a class="ml-5" href="https://deno.land/x/dndb"><img
@@ -14,9 +14,9 @@
         query API to edit and find data, making it 100% exportable to a mongojs environment.</p>
       <p class="inline-block ml-5 mt-5 text-gray">DnDB latest version is: <code>v{{version}}</code>.</p>
     </div>
-    <div class="flex">
-      <div class="w-96 mr-10">
-        <div class="p-10 rounded-2xl sticky top-24">
+    <div class="mb-32 flex flex-col sm:flex-row">
+      <div class="sm:w-96 mr-10">
+        <div class="py-10 sm:p-10 rounded-2xl sticky top-24">
           <h1 class="text-lg font-bold text-main-color mb-5">
             Contents
           </h1>
@@ -52,13 +52,13 @@
           </blockquote>
         <h2 id="importing">📦 Importing</h2>
         <p><strong>From deno.land</strong></p>
-        <pre v-highlightjs><code class="javascript">import Datastore from 'https://deno.land/x/dndb@{{version}}/mod.ts'
+        <pre v-highlightjs><code class="javascript bg-black">import Datastore from 'https://deno.land/x/dndb@{{version}}/mod.ts'
 </code></pre>
         <p><strong>From nest.land</strong></p>
-        <pre v-highlightjs><code class="javascript">import Datastore from 'https://x.nest.land/dndb@{{version}}/mod.ts'
+        <pre v-highlightjs><code class="javascript bg-black">import Datastore from 'https://x.nest.land/dndb@{{version}}/mod.ts'
 </code></pre>
         <h2 id="instatiating-a-collection">✔️ Instantiating the collection</h2>
-        <pre v-highlightjs><code class="javascript">import Datastore from 'https://deno.land/x/dndb@{{version}}/mod.ts'
+        <pre v-highlightjs><code class="javascript bg-black">import Datastore from 'https://deno.land/x/dndb@{{version}}/mod.ts'
 const db = new Datastore({ filename:"./database.db", autoload: true })
 </code></pre>
         <p>When you instantiate a collection you can pass it a config object with a couple of options:</p>
@@ -82,7 +82,7 @@ const db = new Datastore({ filename:"./database.db", autoload: true })
         <p>All data types are allowed, but field names starting with '$' are reserved for data querying.</p>
         <p>If the document does not contain an _id field, DnDB will automatically generated one for you (a RFC4122 UUID
           alphanumerical string). The _id of a document, once set, shouldn't be modified.</p>
-        <pre v-highlightjs><code class="javascript">let obj = {
+        <pre v-highlightjs><code class="javascript bg-black">let obj = {
   name: 'denyn',
   lastname: 'crawford'
 }
@@ -110,7 +110,7 @@ db.insert(obj, (insertion) =&gt; {
           <li><code>callback</code>(optional): The callback function to get the data inserted.</li>
         </ul>
         <p>You can also insert several documents at the same time by wrapping them in an array.</p>
-        <pre v-highlightjs><code class="javascript">
+        <pre v-highlightjs><code class="javascript bg-black">
 let foo = "foo"
 
 db.insert([ { name: 'denyn' }, { name: foo } ], (insertion) =&gt; {
@@ -147,7 +147,7 @@ db.insert([ { name: 'denyn' }, { name: foo } ], (insertion) =&gt; {
           <p><em>Notice</em>: See all rules and operators list <a href="https://www.npmjs.com/package/mingo">here</a>
           </p>
         </blockquote>
-        <pre v-highlightjs><code class="javascript">
+        <pre v-highlightjs><code class="javascript bg-black">
 db.find({name:"Denyn"}, {}, (docs) =&gt; {
   console.log(docs);
 });
@@ -166,7 +166,7 @@ let docs = await db.find( { fullname: { lastname: "Crawford" } })
 
 </code></pre>
         <p>You can also use dot notation to find documents by deep querying.</p>
-        <pre v-highlightjs><code class="javascript">
+        <pre v-highlightjs><code class="javascript bg-black">
 let docs = await db.find( { "fullname.lastname": "Crawford" })
 
 // Using dot notation to find inside arrays:
@@ -190,7 +190,7 @@ let docs = await db.find( { "list.games.0": "Doom" })
           <p><em>Notice</em>: See all rules and operators list <a href="https://www.npmjs.com/package/mingo">here</a>
           </p>
         </blockquote>
-        <pre v-highlightjs><code class="javascript">
+        <pre v-highlightjs><code class="javascript bg-black">
 db.find({ planet: 'Mars' }, { planet: 1, system: 1 }, function (docs) {
   // docs is [{ planet: 'Mars', system: 'solar', _id: 'id1' }]
 });
@@ -221,7 +221,7 @@ db.find({ planet: 'Mars' }, { planet: 1, system: 1 }, function (docs) {
           <p><em>Notice</em>: See all rules and operators list <a href="https://www.npmjs.com/package/mingo">here</a>
           </p>
         </blockquote>
-        <pre v-highlightjs><code class="javascript">db.update({ name: 'denyn' }, { $set: { pet: 'Boots' } }, (update) =&gt; {
+        <pre v-highlightjs><code class="javascript bg-black">db.update({ name: 'denyn' }, { $set: { pet: 'Boots' } }, (update) =&gt; {
   // ...foo(update)
 });
 
@@ -247,7 +247,7 @@ let update = await db.update({ name: 'denyn' }, { $set: { pet: 'Boots' } })
         </ul>
         <p>The remove method follows the same query rules as in <code>find</code> and <code>findOne</code> at first
           argument, it will remove all the documents that matches the query.</p>
-        <pre v-highlightjs><code class="javascript">db.remove({ _id: 'id2' }, function (newdoc) {
+        <pre v-highlightjs><code class="javascript bg-black">db.remove({ _id: 'id2' }, function (newdoc) {
   // ...foo(newDoc)
 });
 
@@ -274,3 +274,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.hljs {
+      background: black;
+    }
+</style>

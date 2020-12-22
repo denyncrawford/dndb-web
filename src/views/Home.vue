@@ -5,15 +5,15 @@
           <div ref="pllx" class="min-w-screen min-h-screen header">
           </div>
         </div>
-        <div class="min-h-screen flex-col z-10 flex justify-center items-center">
-          <div ref="hero" class="z-50 flex items-top">
-            <img class="logo" alt="DnDB" src="../assets/dndblogo.png" />
-            <div class="ml-10">
+        <div class="min-h-screen flex-col flex justify-center items-center">
+          <div ref="hero" class="z-30 flex justify-center flex-col sm:flex-row items-top">
+            <img class="logo mx-auto w-20 mb-10 h-20 sm:w-64 sm:h-64" alt="DnDB" src="../assets/dndblogo.png" />
+            <div class="sm:ml-10 flex-flex-col justify-center text-center sm:text-left">
               <div id="animateMe" class="flex relative max-w-xl">
-                <h1 class="text-main-color text-5xl max-w-xl">{{ title }}</h1>
+                <h1 class="text-main-color text-3xl sm:text-5xl max-w-xl">{{ title }}</h1>
               </div>
-              <h4 class="text-2xl wrap" id="typed"></h4>
-              <p class="max-w-xl mt-5">DnDB is a powerful but minimalist database engine written on JS/TS for the deno runtime that uses the mongo query API to edit and find data, making it 100% exportable to a mongojs environment.</p>
+              <h4 class="text-lg sm:text-2xl wrap" id="typed"></h4>
+              <p class="max-w-xl mt-5 text-sm">DnDB is a powerful but minimalist database engine written on JS/TS for the deno runtime that uses the mongo query API to edit and find data, making it 100% exportable to a mongojs environment.</p>
               <a class="el-button el-button--primary mt-5 text-black" href="#get-started" data-v-c5362648="" data-v-a5f3b890-s=""><span>Get Started</span></a>
               <p class="inline-block ml-5 mt-5 text-gray">DnDB latest version is: <code>v{{version}}</code>.</p>
             </div>
@@ -21,7 +21,7 @@
         </div>
       </page>
     <page ref="get-started" id="get-started" bg="bg-black">
-      <div class="px-32">
+      <div class="sm:px-32">
         <h1 class="text-main-color text-5xl inline-block">Get started</h1>
         <p class="mt-5">This is a quick guide for implementing DnDB, plaese read the documentation for a deeper knowleadge. <br> 
            <b class="text-bold">The version number on this quick guide is always the latest release available</b>.
@@ -69,7 +69,7 @@ let removed = await collection.remove({ username:'Denyn' });
         <div class="bg-black justify-center w-full flex flex-col text-center">
           <h1 class="mx-auto text-center text-main-color text-5xl max-w-xl mt-10 mb-10">Don't you know where to start?</h1>
           <p class="mb-10 text-gray-80">Try this points to know more about DnDB</p>
-          <div class="w-9/12 mx-auto grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-10 mb-20">
+          <div class="sm:w-9/12 mx-auto grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-10 mb-20">
             <div class="p-10 rounded-2xl flex flex-col transform hover:scale-110 justify-center hover:border border-2 transition duration-200 hover:border-main-color">
               <h1 class="text-3xl max-w-xl mb-5">The Project</h1>
               <div class="mb-5 flex">
@@ -105,7 +105,6 @@ import Page from '../components/structure/Page.vue'
 import TypeIt from "typeit";
 import { computed } from 'vue'
 import { useStore } from 'vuex'
-import Rellax from "rellax"
 import { replace } from 'feather-icons'
 
 export default {
@@ -149,7 +148,6 @@ export default {
     .delete(12)
     .type('the datastore for Deno.')
     .go();
-    var rellax = new Rellax('.rellax');
   },
   setup() {
     const store = useStore()

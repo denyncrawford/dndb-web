@@ -1,13 +1,15 @@
 <template>
-  <div class="p-5 z-20 fixed flex w-full justify-center">
+  <div class="p-5 z-40 fixed flex flex-col sm:flex-row w-full justify-center">
     <router-link class="flex items-center bg-opacity-0" :to="{name:'Home', path:'/'}">
       <img class="logo" src="../../assets/dndblogo.png" :if="image">
       <h1 class="font-bold ml-2 text-white" :if="title">{{title}}</h1>
     </router-link>
-    <ul class="ml-auto flex items-center" :if="link">
-      <router-link class="link ml-5" v-for="(item, i) in links" :to="item.to" :key="i">
-        {{item.displayname}}
-      </router-link>
+    <ul class="mt-5 p-5 sm:p-0 rounded bg-main-color sm:bg-transparent sm:ml-auto sm:flex items-center" :if="link">
+      <li class="ml-5 sm:ml-0" v-for="(item, i) in links" :key="i">
+        <router-link class="link sm:ml-5" :to="item.to">
+          {{item.displayname}}
+        </router-link>
+      </li>
       <li @click="openGithub" class="ml-5 link">
         <i data-feather="github"></i>
       </li>
