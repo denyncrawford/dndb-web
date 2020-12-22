@@ -1,19 +1,24 @@
 <template>
-  <div class="p-5 z-40 fixed flex flex-col sm:flex-row w-full justify-center">
+  <div class="p-5 z-40 fixed flex flex-col sm:flex-row w-full">
+    <div v-show="isMobile" @click="toggleNav" class="absolute m-5 -right-0 -top-0">
+      <i data-feather="menu"></i>
+    </div>
     <router-link class="flex items-center bg-opacity-0" :to="{name:'Home', path:'/'}">
       <img class="logo" src="../../assets/dndblogo.png" :if="image">
       <h1 class="font-bold ml-2 text-white" :if="title">{{title}}</h1>
     </router-link>
-    <ul class="mt-5 p-5 sm:p-0 rounded bg-main-color sm:bg-transparent sm:ml-auto sm:flex items-center" :if="link">
-      <li class="ml-5 sm:ml-0" v-for="(item, i) in links" :key="i">
-        <router-link class="link sm:ml-5" :to="item.to">
-          {{item.displayname}}
-        </router-link>
-      </li>
-      <li @click="openGithub" class="ml-5 link">
-        <i data-feather="github"></i>
-      </li>
-    </ul>
+    <transition name="slide">
+      <ul v-show="visible" class="mt-5 p-5 sm:p-0 rounded bg-main-color sm:bg-transparent sm:ml-auto sm:flex items-center" :if="link">
+        <li class="ml-5 sm:ml-0" v-for="(item, i) in links" :key="i">
+          <router-link class="link sm:ml-5" :to="item.to">
+            {{item.displayname}}
+          </router-link>
+        </li>
+        <li @click="openGithub" class="ml-5 link">
+          <i data-feather="github"></i>
+        </li>
+      </ul>
+    </transition>
   </div>
 </template>
 
@@ -23,7 +28,8 @@ import { replace } from 'feather-icons'
 export default {
   data() {
     return {
-      githubUrl: 'https://github.com/denyncrawford/dndb'
+      githubUrl: 'https://github.com/denyncrawford/dndb',
+      visible: false
     }
   },
   setup(){
@@ -38,17 +44,41 @@ export default {
   },
   props: ['title','image','links'],
   mounted() {
+    this.updateNav()
+    window.addEventListener('resize', this.updateNav())
     replace()
+  },
+  computed: {
+    isMobile() {
+      return window.innerWidth <= 640;
+    }
   },
   methods: {
     openGithub() {
       window.open(this.githubUrl, '_blank');
+    },
+    toggleNav() {
+      this.visible = !this.visible
+    },
+    updateNav() {
+      console.log("working")
+      if (!this.isMobile) this.visible = true;
+      else this.visible = false
     }
   }
 }
 </script>
 
 <style scoped>
+  .slide-enter-active {
+   animation: fadeInDown;
+   animation-duration: .5s;
+  }
+
+  .slide-leave-active {
+    animation: fadeOutUp;
+    animation-duration: .5s;
+  }
   .logo {
     max-width: 20px;
     max-height: 20px;
