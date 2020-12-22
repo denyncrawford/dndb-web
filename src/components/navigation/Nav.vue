@@ -61,7 +61,6 @@ export default {
       this.visible = !this.visible
     },
     updateNav() {
-      console.log("working")
       if (!this.isMobile) this.visible = true;
       else this.visible = false
     }

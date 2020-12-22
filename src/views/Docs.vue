@@ -14,7 +14,7 @@
         query API to edit and find data, making it 100% exportable to a mongojs environment.</p>
       <p class="inline-block ml-5 mt-5 text-gray">DnDB latest version is: <code>v{{version}}</code>.</p>
     </div>
-    <div class="mb-32 flex flex-col sm:flex-row">
+    <div class="sm:mx-32 mb-32 flex flex-col sm:flex-row">
       <div class="sm:w-96 mr-10">
         <div class="py-10 sm:p-10 rounded-2xl sticky top-24">
           <h1 class="text-lg font-bold text-main-color mb-5">
