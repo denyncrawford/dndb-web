@@ -19,7 +19,7 @@
 }
 
 .markdown {
-  @apply text-gray-900 leading-normal break-words;
+  @apply text-white leading-normal break-words;
 }
 
 .markdown > * + * {
