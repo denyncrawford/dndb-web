@@ -1,11 +1,11 @@
 <template>
   <div class="bg-black">
-      <div class="justify-center py-20 px-10 sm:px-40 bg-main-color w-full flex flex-col sm:flex-row">
+      <div class=" py-20 px-10 sm:px-40 bg-main-color w-full flex flex-col sm:flex-row">
         <div>
           <h1 class="text-black text-3xl inline-block">Do you want to back this project?</h1>
           <p class="mt-2 max-w-prose">By supporting DnDB you can maintain this and other projects and promote yours at the same time. <a href="https://github.com/denyncrawford" target="_blank" rel="noopener noreferrer">Contact us</a> to find out more about the DnDB spotlight.</p>
         </div>
-        <a href="https://github.com/denyncrawford" target="_blank" rel="noopener noreferrer"><el-button class="mt-5 sm:mt-auto sm:ml-auto my-auto bg-transparent border-black hover:bg-black hover:text-main-color text-black">Support DnDB</el-button></a>
+        <a class="mt-5 sm:mt-auto sm:ml-auto my-auto" href="https://github.com/denyncrawford" target="_blank" rel="noopener noreferrer"><el-button class="bg-transparent border-black hover:bg-black hover:text-main-color text-black">Support DnDB</el-button></a>
       </div>
     </div>
   <div class="px-10 sm:px-40 flex items-center py-10">
