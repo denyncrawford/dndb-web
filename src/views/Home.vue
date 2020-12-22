@@ -13,7 +13,7 @@
                 <h1 class="text-main-color text-3xl sm:text-5xl max-w-xl">{{ title }}</h1>
               </div>
               <h4 class="text-lg sm:text-2xl wrap" id="typed"></h4>
-              <p class="max-w-xl mt-5 text-sm">DnDB is a powerful but minimalist database engine written on JS/TS for the deno runtime that uses the mongo query API to edit and find data, making it 100% exportable to a mongojs environment.</p>
+              <p class="max-w-xl mt-5 text-sm">DnDB is a powerful but minimalist database engine written on JS/TS for the Deno runtime that uses the mongo query API to edit and find data, making it 100% exportable to a mongojs environment.</p>
               <a class="el-button el-button--primary mt-5 text-black" href="#get-started" data-v-c5362648="" data-v-a5f3b890-s=""><span>Get Started</span></a>
               <p class="inline-block ml-5 mt-5 text-gray">DnDB latest version is: <code>v{{version}}</code>.</p>
             </div>
@@ -23,7 +23,7 @@
     <page ref="get-started" id="get-started" bg="bg-black">
       <div class="sm:px-32">
         <h1 class="text-main-color text-5xl inline-block">Get started</h1>
-        <p class="mt-5">This is a quick guide for implementing DnDB, plaese read the documentation for a deeper knowleadge. <br> 
+        <p class="mt-5">This is a quick guide for implementing DnDB, plaese read the documentation for a deeper knowledge. <br> 
            <b class="text-bold">The version number on this quick guide is always the latest release available</b>.
         </p>
         <h1 class="mt-10 text-main-color text-3xl inline-block">Importing</h1>
@@ -39,7 +39,7 @@ const collection = new Datastore({
 })</code></pre>
       <h1 class="mt-10 text-main-color text-3xl inline-block">Usage</h1>
 
-      <h1 class="mt-10 text-main-color text-xl">Inseting documents</h1>
+      <h1 class="mt-10 text-main-color text-xl">Inserting documents</h1>
       <pre v-highlightjs><code class="javascript bg-black">
 let insertion = await collection.insert({ username:'Denyn' });
 //or
@@ -67,15 +67,15 @@ let removed = await collection.remove({ username:'Denyn' });
     </page>
     <page bg="bg-black">
         <div class="bg-black justify-center w-full flex flex-col text-center">
-          <h1 class="mx-auto text-center text-main-color text-5xl max-w-xl mt-10 mb-10">Don't you know where to start?</h1>
-          <p class="mb-10 text-gray-80">Try this points to know more about DnDB</p>
+          <h1 class="mx-auto text-center text-main-color text-5xl max-w-xl mt-10 mb-10">Don't know where to start?</h1>
+          <p class="mb-10 text-gray-80">Here are the next steps to know more about DnDB:</p>
           <div class="sm:w-9/12 mx-auto grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-10 mb-20">
             <div class="p-10 rounded-2xl flex flex-col transform hover:scale-110 justify-center hover:border border-2 transition duration-200 hover:border-main-color">
               <h1 class="text-3xl max-w-xl mb-5">The Project</h1>
               <div class="mb-5 flex">
                 <i class="mx-auto stroke-current text-main-color" data-feather="plus"></i>
               </div>
-              <p class="mb-5">Know more about this and other projects by Crawford.</p>
+              <p class="mb-5">Know more about DnDB and other projects by Crawford.</p>
               <el-button type="primary" @click="go('why')" class="hover:text-black bg-transparent text-white mt-auto text-black">Read</el-button>
             </div>
             <div class="p-10 rounded-2xl flex flex-col transform hover:scale-110 justify-center border border-2 transition duration-200 hover:border-main-color">
@@ -91,7 +91,7 @@ let removed = await collection.remove({ username:'Denyn' });
                 <div class="mb-5 flex">
                   <i class="mx-auto stroke-current text-main-color" data-feather="codesandbox"></i>
                 </div>
-              <p class="mb-5">Make a quick test using Dndb on a server environment</p>
+              <p class="mb-5">Make a quick test using DnDB on a server environment</p>
               <el-button type="primary" class="mt-auto hover:text-black bg-transparent text-white text-black">Run the starter</el-button>
             </div>
           </div>
