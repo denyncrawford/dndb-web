@@ -1,5 +1,7 @@
 # dndb-web 🦕
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/34554472-8d96-443b-8a22-fb45ef3a2965/deploy-status)](https://app.netlify.com/sites/dndb-site/deploys)
+
 > Are you looking for DnDB documentation? Go to [the official DnDB repository](https://github.com/denyncrawford/dndb).
 
 The official website for **DnDB**, a Deno 🦕 persistent, embeddable and optimized 
