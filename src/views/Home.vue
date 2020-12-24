@@ -92,7 +92,7 @@ let removed = await collection.remove({ username:'Denyn' });
                   <i class="mx-auto stroke-current text-main-color" data-feather="codesandbox"></i>
                 </div>
               <p class="mb-5">Make a quick test using DnDB on a server environment</p>
-              <a href="https://codesandbox.io/s/dndb-starter-i5i9r?file=/src/index.js" target="_blank" rel="noopener noreferrer">
+              <a class="mt-auto inline" href="https://codesandbox.io/s/dndb-starter-i5i9r?file=/src/index.js" target="_blank" rel="noopener noreferrer">
                 <el-button type="primary" class="mt-auto hover:text-black bg-transparent text-white text-black">Run the starter</el-button>
               </a>
             </div>
