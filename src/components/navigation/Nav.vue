@@ -8,7 +8,7 @@
       <h1 class="font-bold ml-2 text-white" :if="title">{{title}}</h1>
     </router-link>
     <transition name="slide">
-      <ul v-show="visible" class="mt-5 p-5 sm:p-0 rounded bg-main-color sm:bg-transparent sm:ml-auto sm:flex items-center" :if="link">
+      <ul v-show="visible" class="mt-5 sm:mt-0 p-5 sm:p-0 rounded bg-main-color sm:bg-transparent sm:ml-auto sm:flex items-center" :if="link">
         <li class="ml-5 sm:ml-0" v-for="(item, i) in links" :key="i">
           <router-link class="link sm:ml-5" :to="item.to">
             {{item.displayname}}
