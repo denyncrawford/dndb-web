@@ -38,7 +38,7 @@
         data, making it 100% exportable to a mongojs environment.
       </p>
       <p class="inline-block ml-5 mt-5 text-gray">
-        DnDB latest version is: <code>v {{ version }}</code
+        DnDB latest version is: <code>v{{ version }}</code
         >.
       </p>
     </div>
@@ -133,6 +133,13 @@ const db = new Datastore({ filename:"./database.db", autoload: true })
               the first time DnDB is runing in your project. This is optional,
               but if the loadDatabase method is not executed, the instance will
               not work until the persistent file exists.
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>bufSize</code>: The bufSize parameter rewrites the
+              default size of the buffer. It must be indicated in numbers 
+              and represents the amount of bytes to be allocated. By default 4096 bytes.
             </p>
           </li>
         </ul>
