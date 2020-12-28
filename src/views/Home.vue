@@ -79,7 +79,7 @@ let removed = await collection.remove({ username:'Denyn' });
               <el-button type="primary" @click="go('why')" class="hover:text-black bg-transparent text-white mt-auto text-black">Read</el-button>
             </div>
             <div class="p-10 rounded-2xl flex flex-col transform hover:scale-110 justify-center border border-2 transition duration-200 hover:border-main-color">
-              <h1 class="text-3xl max-w-xl mb-5">Documentation</h1>
+              <h1 class="overflow-ellipsis overflow-hidden text-3xl max-w-xl mb-5">Documentation</h1>
               <div class="mb-5 flex">
                 <i class="mx-auto stroke-current text-main-color" data-feather="book-open"></i>
               </div>
