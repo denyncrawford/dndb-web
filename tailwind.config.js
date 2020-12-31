@@ -2,13 +2,13 @@ module.exports = {
   purge: false,
   theme: {
     fontFamily: {
-      'sans': ['Inter', 'Sans-serif'],
-      'mono': ['Major Mono Display', 'monospace']
+      sans: ['Inter', 'Sans-serif'],
+      mono: ['Major Mono Display', 'monospace'],
     },
     extend: {
       colors: {
-        "main-color": "#00ffa8" 
-      }
+        'main-color': '#00ffa8',
+      },
     },
   },
   variants: {
@@ -17,4 +17,4 @@ module.exports = {
     padding: ['responsive', 'hover', 'focus'],
   },
   plugins: [],
-}
+};
